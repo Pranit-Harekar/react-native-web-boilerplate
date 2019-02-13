@@ -1,0 +1,34 @@
+{
+  "name": "rnwboilerplate",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "ios": "react-native run-ios",
+    "web": "./node_modules/.bin/webpack-dev-server -d --config ./web/webpack.config.js --inline --hot --colors",
+    "build-web-production": "./node_modules/.bin/webpack -p --config ./web/webpack.config.js"
+  },
+  "dependencies": {
+    "react": "16.6.3",
+    "react-dom": "^16.8.1",
+    "react-native": "0.58.4",
+    "react-native-web": "^0.10.0"
+  },
+  "devDependencies": {
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "24.1.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-react-native-web": "^0.10.0",
+    "jest": "24.1.0",
+    "metro-react-native-babel-preset": "0.51.1",
+    "react-test-renderer": "16.6.3",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
