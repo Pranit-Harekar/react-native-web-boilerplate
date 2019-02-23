@@ -1,13 +1,14 @@
 {
   "name": "rnwboilerplate",
   "version": "0.0.1",
+  "author": "Pranit Harekar <pranitharekar@hotmail.com>",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "ios": "react-native run-ios",
-    "web": "./node_modules/.bin/webpack-dev-server -d --config ./web/webpack.config.js --inline --hot --colors",
-    "build-web-production": "./node_modules/.bin/webpack -p --config ./web/webpack.config.js"
+    "build:web": "./node_modules/.bin/webpack-dev-server -d --config ./web/webpack.config.js --inline --hot --colors",
+    "build:web-production": "./node_modules/.bin/webpack -p --config ./web/webpack.config.js"
   },
   "dependencies": {
     "react": "16.6.3",
