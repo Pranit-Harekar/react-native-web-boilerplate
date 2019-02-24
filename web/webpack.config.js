@@ -10,11 +10,13 @@ const appDirectory = path.resolve(__dirname, "../");
 // `node_module`.
 const babelLoaderConfiguration = {
   test: /\.js$/,
-  // Add every directory that needs to be compiled by Babel during the build.
+  // Add every directory that needs to be compiled by Babel during the build
+  // including third party modules like react-navigation etc.
   include: [
     path.resolve(appDirectory, "index.web.js"),
     path.resolve(appDirectory, "App.js")
-    // path.resolve(appDirectory, "node_modules/react-native-uncompiled")
+    // path.resolve(__dirname, './node_modules/react-native-vector-icons')
+    // path.resolve(__dirname, './node_modules/react-navigation')
   ],
   use: {
     loader: "babel-loader",
@@ -41,7 +43,7 @@ const imageLoaderConfiguration = {
 
 module.exports = {
   entry: [
-    // load any web API polyfills
+    // load any web API polyfills if you have e.g.
     // path.resolve(appDirectory, 'polyfills-web.js'),
     // your web-specific entry file
     path.resolve(appDirectory, "index.web.js")
@@ -69,6 +71,7 @@ module.exports = {
     // `.web.js`.
     extensions: [".web.js", ".js"]
   },
+
   devServer: {
     contentBase: path.join(appDirectory, "web"),
     compress: true,
